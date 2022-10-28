@@ -8,16 +8,21 @@ const Feed = () => {
     // Refer to Hint 2 for more help!
 
     /* Use the map() function to render multiple Blocks! */
-    const posts = null; // TODO: edit this variable
+     // TODO: edit this variable
+    const [allposts, pushPost] = useState([]);
+    
 
     return (
         <div>
-            <Menu></Menu>
+            <Menu handleClick = {click}></Menu>
 
             {/* Below is where all of your Blocks should render! */}
-            {posts}
+            {allposts.map((color, index) => <Block key = {index} text = {color}/>)}
         </div>
     );
+    function click(color){
+        pushPost(allposts => [color, ...allposts]);
+    }
 }
 
 export default Feed;
