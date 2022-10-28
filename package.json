@@ -1,5 +1,8 @@
 {
   "name": "blockstagram",
+  "homepage": "https://fullstack-decal-fa22.github.io/hw4-cy0411",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
